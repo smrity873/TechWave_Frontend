@@ -12,25 +12,77 @@
 
     <!-- Header & Navbar -->
     <header>
-      <nav class="w-full max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-3">
-        <div class="flex justify-between items-center">
-          <h1 class="font-bold text-white text-2xl md:text-4xl">
-            Tech<span class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent">
-              Wave
-            </span>
-          </h1>
+      
+<nav class="w-full max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-3">
+  <div class="flex justify-between items-center">
 
-          <div class="hidden md:flex gap-6 text-white items-center">
-            <p>About</p>
-            <p>Episodes</p>
-            <p>Host</p>
-          </div>
+    <!-- Logo -->
+    <h1 class="font-bold text-white text-2xl md:text-4xl">
+      Tech<span class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent">
+        Wave
+      </span>
+    </h1>
 
-          <button class="px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 hover:scale-105 transition duration-300">
-            Subscribe →
-          </button>
-        </div>
-      </nav>
+    <!-- Desktop Menu: Large screen -->
+    <div class="hidden lg:flex gap-6 text-white items-center">
+      <a href="#about">About</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#host">Host</a>
+    </div>
+
+    <!-- Subscribe & Hamburger -->
+    <div class="flex items-center gap-3">
+
+      <button class="hidden md:flex px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2">
+        Subscribe
+        <img src="/assets/ArrowRight.png" alt="">
+      </button>
+
+      <!-- Hamburger: Mobile & Tablet -->
+      <button
+        id="menu-btn"
+        class="lg:hidden text-white text-3xl"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <img src="/assets/hamburger-menu.png" alt="">
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile & Tablet Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 text-white text-center justify-center pt-5">
+
+    <a href="#about" class="hover:text-pink-400">About</a>
+    <a href="#episodes" class="hover:text-pink-400">Episodes</a>
+    <a href="#host" class="hover:text-pink-400">Host</a>
+
+    <button class="mx-auto px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2">
+      Subscribe
+      <img src="/assets/ArrowRight.png" alt="">
+    </button>
+
+  </div>
+</nav>
+
+<!-- Hamburger JavaScript -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+
+    const isOpen = !mobileMenu.classList.contains("hidden");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+  });
+</script>
+
+
+
 
       <hr class="border border-white/8" />
 
