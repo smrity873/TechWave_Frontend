@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,86 +8,86 @@
   </head>
 
   <body class="bg-[#1A0B2E]">
-
     <!-- Header & Navbar -->
     <header>
-      
-<nav class="w-full max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-3">
-  <div class="flex justify-between items-center">
+      <nav class="w-full max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <h1 class="font-bold text-white text-2xl md:text-4xl">
+            Tech<span
+              class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent"
+            >
+              Wave
+            </span>
+          </h1>
 
-    <!-- Logo -->
-    <h1 class="font-bold text-white text-2xl md:text-4xl">
-      Tech<span class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent">
-        Wave
-      </span>
-    </h1>
+          <!-- Desktop Menu: Large screen -->
+          <div class="hidden lg:flex gap-6 text-white items-center">
+            <a href="#about">About</a>
+            <a href="#episodes">Episodes</a>
+            <a href="#host">Host</a>
+          </div>
 
-    <!-- Desktop Menu: Large screen -->
-    <div class="hidden lg:flex gap-6 text-white items-center">
-      <a href="#about">About</a>
-      <a href="#episodes">Episodes</a>
-      <a href="#host">Host</a>
-    </div>
+          <!-- Subscribe & Hamburger -->
+          <div class="flex items-center gap-3">
+            <button
+              class="hidden md:flex px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2"
+            >
+              Subscribe
+              <img src="./assets/ArrowRight.png" alt="" />
+            </button>
 
-    <!-- Subscribe & Hamburger -->
-    <div class="flex items-center gap-3">
+            <!-- Hamburger: Mobile & Tablet -->
+            <button
+              id="menu-btn"
+              class="lg:hidden text-white text-3xl"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <img src="../assets/hamburger-menu.png" alt="" />
+            </button>
+          </div>
+        </div>
 
-      <button class="hidden md:flex px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2">
-        Subscribe
-        <img src="/assets/ArrowRight.png" alt="">
-      </button>
+        <!-- Mobile & Tablet Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden flex-col gap-4 text-white text-center justify-center pt-5"
+        >
+          <a href="#about" class="hover:text-pink-400">About</a>
+          <a href="#episodes" class="hover:text-pink-400">Episodes</a>
+          <a href="#host" class="hover:text-pink-400">Host</a>
 
-      <!-- Hamburger: Mobile & Tablet -->
-      <button
-        id="menu-btn"
-        class="lg:hidden text-white text-3xl"
-        aria-label="Open menu"
-        aria-expanded="false"
-      >
-        <img src="/assets/hamburger-menu.png" alt="">
-      </button>
+          <button
+            class="mx-auto px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2"
+          >
+            Subscribe
+            <img src="./assets/ArrowRight.png" alt="" />
+          </button>
+        </div>
+      </nav>
 
-    </div>
-  </div>
+      <!-- Hamburger JavaScript -->
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-  <!-- Mobile & Tablet Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 text-white text-center justify-center pt-5">
+        menuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("flex");
 
-    <a href="#about" class="hover:text-pink-400">About</a>
-    <a href="#episodes" class="hover:text-pink-400">Episodes</a>
-    <a href="#host" class="hover:text-pink-400">Host</a>
+          const isOpen = !mobileMenu.classList.contains("hidden");
 
-    <button class="mx-auto px-3 md:px-5 py-2 rounded-full text-white text-sm md:text-lg font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2">
-      Subscribe
-      <img src="/assets/ArrowRight.png" alt="">
-    </button>
-
-  </div>
-</nav>
-
-<!-- Hamburger JavaScript -->
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  menuBtn.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex");
-
-    const isOpen = !mobileMenu.classList.contains("hidden");
-
-    menuBtn.setAttribute("aria-expanded", isOpen);
-  });
-</script>
-
-
-
+          menuBtn.setAttribute("aria-expanded", isOpen);
+        });
+      </script>
 
       <hr class="border border-white/8" />
 
       <!-- Banner Section -->
-      <section class="bg-[url('/assets/hero-bg.png')] bg-cover bg-center bg-no-repeat min-h-[500px] md:min-h-[580px] lg:min-h-[650px]">
-
+      <section
+        class="bg-[url('/assets/hero-bg.png')] bg-cover bg-center bg-no-repeat min-h-[500px] md:min-h-[580px] lg:min-h-[650px]"
+      >
         <!-- Images -->
         <div class="relative flex justify-center items-center pt-12 md:pt-14">
           <img
@@ -107,9 +106,7 @@
         <!-- Banner Text -->
         <div class="mx-auto px-4 pt-4">
           <div class="text-center">
-            <h1 class="text-white font-bold text-3xl md:text-5xl">
-              TechWave
-            </h1>
+            <h1 class="text-white font-bold text-3xl md:text-5xl">TechWave</h1>
 
             <p class="text-sm md:text-base text-white mt-3 max-w-xl mx-auto">
               Your daily dose of tech insights, productivity hacks, and personal
@@ -119,12 +116,16 @@
 
           <!-- Buttons -->
           <div class="flex flex-wrap justify-center gap-3 pt-4">
-            <button class="px-4 py-2 rounded-full text-white font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2 text-xs md:text-sm hover:scale-105 transition duration-300">
+            <button
+              class="px-4 py-2 rounded-full text-white font-semibold bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-700 flex items-center gap-2 text-xs md:text-sm hover:scale-105 transition duration-300"
+            >
               <img class="h-6" src="/assets/spotify.png" alt="" />
               Listen On Spotify
             </button>
 
-            <button class="px-4 py-2 rounded-full text-green-500 font-semibold border-2 flex items-center gap-2 text-xs md:text-sm">
+            <button
+              class="px-4 py-2 rounded-full text-green-500 font-semibold border-2 flex items-center gap-2 text-xs md:text-sm"
+            >
               <img class="h-6" src="/assets/message.png" alt="" />
               Listen On Spotify
             </button>
@@ -139,7 +140,9 @@
             About The Podcast
           </h2>
 
-          <p class="text-gray-200 text-xs md:text-sm text-center pt-3 leading-7">
+          <p
+            class="text-gray-200 text-xs md:text-sm text-center pt-3 leading-7"
+          >
             TechWave is your go-to podcast for staying ahead in the fast-paced
             world of technology.
             <br class="hidden md:block" />
@@ -171,16 +174,12 @@
 
           <div class="text-center">
             <p class="text-green-500 text-2xl md:text-4xl font-bold">4.9★</p>
-            <p class="text-gray-200 text-[10px] md:text-sm">
-              AVERAGE RATING
-            </p>
+            <p class="text-gray-200 text-[10px] md:text-sm">AVERAGE RATING</p>
           </div>
 
           <div class="text-center">
             <p class="text-green-500 text-2xl md:text-4xl font-bold">50+</p>
-            <p class="text-gray-200 text-[10px] md:text-sm">
-              INDUSTRY EXPERTS
-            </p>
+            <p class="text-gray-200 text-[10px] md:text-sm">INDUSTRY EXPERTS</p>
           </div>
         </div>
       </section>
@@ -188,18 +187,22 @@
 
     <!-- Main Body -->
     <main>
-
       <!-- Why Choose TechWave -->
       <section class="my-8 md:my-12 px-4">
-        <h2 class="text-center py-2 text-white font-semibold text-xl md:text-2xl mb-3">
+        <h2
+          class="text-center py-2 text-white font-semibold text-xl md:text-2xl mb-3"
+        >
           Why Choose TechWave
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-6xl mx-auto">
-
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-6xl mx-auto"
+        >
           <!-- Card 1 -->
-          <div class="md:col-start-1 md:row-start-1 md:row-span-2 bg-purple-950 rounded-xl p-5 md:p-6 lg:pt-12">
-            <img src="/assets/headphone.png" alt="" />
+          <div
+            class="md:col-start-1 md:row-start-1 md:row-span-2 bg-purple-950 rounded-xl p-5 md:p-6 lg:pt-12"
+          >
+            <img src="./assets/headphone.png" alt="" />
 
             <h4 class="text-white text-sm font-medium pt-3">
               Premium Audio Quality
@@ -213,12 +216,12 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="md:col-start-2 md:row-start-1 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6">
-            <img src="/assets/device.png" alt="" />
+          <div
+            class="md:col-start-2 md:row-start-1 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6"
+          >
+            <img src="./assets/device.png" alt="" />
 
-            <h4 class="text-white text-sm font-medium pt-3">
-              Mobile Friendly
-            </h4>
+            <h4 class="text-white text-sm font-medium pt-3">Mobile Friendly</h4>
 
             <p class="text-gray-400 font-light text-sm pt-2 leading-6">
               Listen on the go with seamless mobile experience and offline
@@ -227,8 +230,10 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="md:col-start-2 md:row-start-2 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6">
-            <img src="/assets/location.png" alt="" />
+          <div
+            class="md:col-start-2 md:row-start-2 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6"
+          >
+            <img src="./assets/location.png" alt="" />
 
             <h4 class="text-white text-sm font-medium pt-3">
               Global Community
@@ -240,8 +245,10 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="md:col-start-1 md:row-start-3 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6">
-            <img src="/assets/zap-fast.png" alt="" />
+          <div
+            class="md:col-start-1 md:row-start-3 md:col-span-2 bg-purple-950 rounded-xl p-5 md:p-6"
+          >
+            <img src="./assets/zap-fast.png" alt="" />
 
             <h4 class="text-white text-sm font-medium pt-3">
               Exclusive Interviews
@@ -256,12 +263,12 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="md:col-start-3 md:row-start-3 bg-purple-950 rounded-xl p-5 md:p-6">
-            <img src="/assets/zap-fast.png" alt="" />
+          <div
+            class="md:col-start-3 md:row-start-3 bg-purple-950 rounded-xl p-5 md:p-6"
+          >
+            <img src="./assets/zap-fast.png" alt="" />
 
-            <h4 class="text-white text-sm font-medium pt-3">
-              Rich Resources
-            </h4>
+            <h4 class="text-white text-sm font-medium pt-3">Rich Resources</h4>
 
             <p class="text-gray-400 font-light text-sm pt-2 leading-6">
               Access show notes, transcripts, and additional learning materials
@@ -273,13 +280,11 @@
 
       <!-- Featured Episodes -->
       <section class="max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-6 md:py-8">
-
         <h3 class="text-white text-xl md:text-3xl font-bold text-center mb-5">
           Featured Episodes
         </h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
           <!-- Episode 1 -->
           <div class="bg-purple-950 rounded-xl overflow-hidden">
             <div class="group relative overflow-hidden">
@@ -363,7 +368,9 @@
           </div>
 
           <!-- Episode 3 -->
-          <div class="bg-purple-950 rounded-xl overflow-hidden sm:col-span-2 lg:col-span-1">
+          <div
+            class="bg-purple-950 rounded-xl overflow-hidden sm:col-span-2 lg:col-span-1"
+          >
             <div class="group relative overflow-hidden">
               <img
                 class="w-full h-48 object-cover"
@@ -406,12 +413,15 @@
 
         <!-- Meet the Host -->
         <div class="py-5">
-          <h3 class="text-white font-bold text-xl md:text-2xl text-center mt-3 py-4">
+          <h3
+            class="text-white font-bold text-xl md:text-2xl text-center mt-3 py-4"
+          >
             Meet the Host
           </h3>
 
-          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-purple-950 p-4 md:p-5 rounded-xl">
-
+          <div
+            class="flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-purple-950 p-4 md:p-5 rounded-xl"
+          >
             <!-- Host Image -->
             <img
               class="w-40 sm:w-48 md:w-52 lg:w-56 shrink-0 object-contain"
@@ -420,9 +430,7 @@
             />
 
             <div class="py-2 md:py-3 w-full text-center md:text-left">
-              <h4 class="text-white text-xl font-medium pb-2">
-                Alex Kumar
-              </h4>
+              <h4 class="text-white text-xl font-medium pb-2">Alex Kumar</h4>
 
               <p class="text-white text-sm font-extralight pb-3 leading-6">
                 Tech entrepreneur, productivity expert, and lifelong learner.
@@ -434,35 +442,65 @@
 
               <!-- Social Icons -->
               <div class="flex gap-3 justify-center md:justify-start">
-
                 <!-- LinkedIn -->
-                <button class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center">
-                  <span class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center">
-                    <img class="h-4 w-4 object-contain" src="/assets/linkedin.png" alt="LinkedIn" />
+                <button
+                  class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center"
+                >
+                  <span
+                    class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center"
+                  >
+                    <img
+                      class="h-4 w-4 object-contain"
+                      src="/assets/linkedin.png"
+                      alt="LinkedIn"
+                    />
                   </span>
                 </button>
 
                 <!-- X -->
-                <button class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center">
-                  <span class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center">
-                    <img class="h-4 w-4 object-contain" src="/assets/x.png" alt="X" />
+                <button
+                  class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center"
+                >
+                  <span
+                    class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center"
+                  >
+                    <img
+                      class="h-4 w-4 object-contain"
+                      src="/assets/x.png"
+                      alt="X"
+                    />
                   </span>
                 </button>
 
                 <!-- Instagram -->
-                <button class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center">
-                  <span class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center">
-                    <img class="h-4 w-4 object-contain" src="/assets/instagram.png" alt="Instagram" />
+                <button
+                  class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center"
+                >
+                  <span
+                    class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center"
+                  >
+                    <img
+                      class="h-4 w-4 object-contain"
+                      src="/assets/instagram.png"
+                      alt="Instagram"
+                    />
                   </span>
                 </button>
 
                 <!-- YouTube -->
-                <button class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center">
-                  <span class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center">
-                    <img class="h-4 w-4 object-contain" src="/assets/youtube.png" alt="YouTube" />
+                <button
+                  class="h-8 w-8 shrink-0 rounded-full p-[2px] bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 flex justify-center items-center"
+                >
+                  <span
+                    class="h-full w-full rounded-full bg-[#1A0B2E] flex justify-center items-center"
+                  >
+                    <img
+                      class="h-4 w-4 object-contain"
+                      src="/assets/youtube.png"
+                      alt="YouTube"
+                    />
                   </span>
                 </button>
-
               </div>
             </div>
           </div>
@@ -471,50 +509,66 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-[url('/assets/footer-bg.png')] bg-cover bg-center bg-no-repeat min-h-[220px] flex items-center justify-center px-4 py-8">
-
+    <footer
+      class="bg-[url('/assets/footer-bg.png')] bg-cover bg-center bg-no-repeat min-h-[220px] flex items-center justify-center px-4 py-8"
+    >
       <div class="mx-auto w-full max-w-6xl">
-
         <h1 class="font-bold text-white text-2xl md:text-4xl text-center">
-          Tech<span class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent">
+          Tech<span
+            class="bg-gradient-to-tl from-yellow-300 via-pink-600 to-purple-700 bg-clip-text text-transparent"
+          >
             Wave
           </span>
         </h1>
 
-        <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 py-5">
-
+        <div
+          class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 py-5"
+        >
           <!-- Spotify -->
           <div class="flex gap-2 items-center">
-            <img class="h-4 w-4 object-contain" src="/assets/spotify.png" alt="Spotify" />
+            <img
+              class="h-4 w-4 object-contain"
+              src="/assets/spotify.png"
+              alt="Spotify"
+            />
             <p class="text-gray-200 text-sm font-light">Spotify</p>
           </div>
 
           <!-- Apple Podcast -->
           <div class="flex gap-2 items-center">
-            <img class="h-4 w-4 object-contain" src="/assets/apple-podcast.png" alt="Apple Podcast" />
+            <img
+              class="h-4 w-4 object-contain"
+              src="/assets/apple-podcast.png"
+              alt="Apple Podcast"
+            />
             <p class="text-gray-200 text-sm font-light">Apple Podcast</p>
           </div>
 
           <!-- YouTube -->
           <div class="flex gap-2 items-center">
-            <img class="h-4 w-4 object-contain" src="/assets/youtube-podcast.png" alt="YouTube" />
+            <img
+              class="h-4 w-4 object-contain"
+              src="/assets/youtube-podcast.png"
+              alt="YouTube"
+            />
             <p class="text-gray-200 text-sm font-light">YouTube</p>
           </div>
 
           <!-- Twitter -->
           <div class="flex gap-2 items-center">
-            <img class="h-4 w-4 object-contain" src="/assets/twitter.png" alt="Twitter" />
+            <img
+              class="h-4 w-4 object-contain"
+              src="/assets/twitter.png"
+              alt="Twitter"
+            />
             <p class="text-gray-200 text-sm font-light">Twitter</p>
           </div>
-
         </div>
 
         <p class="text-gray-500 text-xs md:text-sm text-center">
           © 2026 TechWave Podcast. All rights reserved.
         </p>
-
       </div>
     </footer>
-
   </body>
 </html>
